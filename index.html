@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+  </head>
+  <link rel="stylesheet" href="styles.css" />
+  <body>
+    <div class="top-bar">
+      <img
+        src="pic/icon1.svg"
+        alt="Icon"
+        class="top-bar-icon"
+        style="width: 30px; height: auto"
+      />
+      <div class="time" id="time"></div>
+      <div class="time" id="bottom-time"></div>
+    </div>
+    <div class="desktop">
+      <div class="folder-group">
+        <div class="folder" id="github" onclick="openGitHub()">
+          <div class="overlay"></div>
+          <img src="pic/github.svg" alt="Github" />
+          <p>Github</p>
+        </div>
+        <div class="folder" id="email" onclick="openEmail()">
+          <div class="overlay"></div>
+          <img src="pic/mail.svg" alt="Email" />
+          <p>Email</p>
+        </div>
+      </div>
+      <div class="folder-group">
+        <div class="folder" id="experience" onclick="openExperiencePopup()">
+          <div class="overlay"></div>
+          <img src="pic/experience.svg" alt="Experience" />
+          <p>Experience</p>
+        </div>
+        <div class="folder" id="resume" onclick="openPage('cv.pdf')">
+          <div class="overlay"></div>
+          <img src="pic/resume.svg" alt="Resume" />
+          <p>Resume</p>
+        </div>
+      </div>
+      <div class="folder-group">
+        <div class="folder" id="education" onclick="openEducationPopup()">
+          <div class="overlay"></div>
+          <img src="pic/education.svg" alt="Education" />
+          <p>Education</p>
+        </div>
+      </div>
+      <div class="folder" id="projects" onclick="openProjectsPopup()">
+        <div class="overlay"></div>
+        <img src="pic/projects.svg" alt="Projects" />
+        <p>Projects</p>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <img
+        src="pic/icon2.svg"
+        alt="Icon"
+        class="bottom-bar-icon"
+        onclick="openPopup()"
+      />
+    </div>
+
+    <div class="popup centered-popup" id="popup">
+      <div class="popup-content">
+        <div class="close-container">
+          <span class="close" id="close">
+            <img
+              src="pic/crossed.svg"
+              alt="Kapat"
+              style="width: 20px; height: auto"
+            />
+          </span>
+        </div>
+        <div class="content-container">
+          <h2>👋👋👋</h2>
+          <p>It was nice to see you here</p>
+          <button id="exitButton">Shut Down</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="education-popup">
+      <div class="popup-content">
+        <span class="close" id="close-education">
+          <img
+            src="pic/crossed.svg"
+            alt="Kapat"
+            style="width: 20px; height: auto"
+          />
+        </span>
+        <div class="header">
+          <img src="pic/education.svg" alt="Education Icon" class="icon" />
+          <h2>Education</h2>
+        </div>
+        <h4>
+          👩‍🎓Eskişehir Technical University - English Preparatory Class,
+          2020-2021
+        </h4>
+        <div class="image-container">
+          <img src="pic/EskisehirUni.jpg" alt="Project 1" class="uni-image" />
+        </div>
+        <hr />
+        <h4>👩‍🎓Atatürk University - Computer Science, 2021 - Present</h4>
+        <div class="image-container">
+          <img src="pic/AtaturkUni.jpg" alt="Project 1" class="uni-image" />
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="experience-popup">
+      <div class="popup-content">
+        <span class="close" id="close-experience">
+          <img
+            src="pic/crossed.svg"
+            alt="Kapat"
+            style="width: 20px; height: auto"
+          />
+        </span>
+        <div class="header">
+          <img src="pic/experience.svg" alt="Experience Icon" class="icon" />
+          <h2>Experience</h2>
+        </div>
+        <h3>👩‍💻 Intern, Data Management Office, Atatürk University</h3>
+        <h3>September 2021 – June 2022</h3>
+        <p>
+          Assisted in managing data for various university projects using Python
+          and SQL, developed and maintained databases to streamline information
+          retrieval.
+        </p>
+        <hr />
+        <h3>👩‍💻 Intern, Software Department, Golden Gateway Holding</h3>
+        <h3>June 2024 – September 2024</h3>
+        <p>
+          Developed backend projects using ASP.NET, designed and implemented API
+          endpoints, and conducted testing and debugging to ensure optimal
+          performance and security.
+        </p>
+      </div>
+    </div>
+
+    <div class="popup" id="projects-popup">
+      <div class="popup-content">
+        <span class="close" id="close-projects">
+          <img
+            src="pic/crossed.svg"
+            alt="Kapat"
+            style="width: 20px; height: auto"
+          />
+        </span>
+        <div class="header">
+          <img src="pic/projects.svg" alt="Projects Icon" class="icon" />
+          <h2>Projects</h2>
+        </div>
+        <h3>Lofi Study Buddy</h3>
+        <img
+          src="pic/project1.png"
+          alt="Project 1"
+          class="project-image"
+          style="width: 100%; height: auto"
+        />
+        <p>
+          This React-powered website is your go-to chill zone for studying! 🎶
+          With a mix of soothing lofi beats and beautiful backgrounds, it sets
+          the perfect mood to help you focus and unwind. Lofi music isn’t just
+          for relaxation; it boosts concentration and creativity, making it
+          ideal for late-night study sessions or cozy afternoons. Dive in, hit
+          play, and let the good vibes enhance your productivity! 🌙✨
+          <a href="https://lofistudybuddy.netlify.app" target="_blank"
+            >lofistudybuddy.netlify.app</a
+          >
+        </p>
+        <hr />
+        <div class="project">
+          <h3>Peki Cocuk</h3>
+          <img src="pic/project2.png" alt="Project 2" class="project-image" />
+          <p>
+            This full-stack app is your go-to hub for students looking for fun
+            and educational resources! 🎓✨ Built with React, Node.js, and
+            MongoDB, it connects learners with various educational tools and
+            materials effortlessly. Whether you need study guides, practice
+            quizzes, or interactive lessons, Peki Cocuk makes it easy to find
+            exactly what you need. Dive in and explore a world of learning made
+            just for you! 🚀📚
+          </p>
+        </div>
+        <hr />
+        <div class="project">
+          <h3>Blog App</h3>
+          <img src="pic/project3.png" alt="Project 3" class="project-image" />
+          <p>
+            The Blog App is your ultimate space for sharing thoughts and
+            stories! 📚✨ Built with React, Node.js, and MongoDB, this
+            full-stack application makes it super easy to write, edit, and
+            publish your blog posts. Whether you're a seasoned writer or just
+            starting out, you can create engaging content and connect with
+            readers. Dive into the world of blogging and let your creativity
+            flow! 🌟
+          </p>
+        </div>
+        <hr />
+        <h3>Little Cute Frontend Project ❤︎</h3>
+        <div class="small-project">
+          <h4>Do You Wanna Go Out With Me</h4>
+          <div class="small-project-images">
+            <img
+              src="pic/small_project1.png"
+              alt="Small Project 1"
+              class="small-project-image"
+              style="width: 50%; height: auto"
+            />
+          </div>
+          <p>
+            A website to invite your lover to date. Built with HTML, CSS,
+            Javascript.
+          </p>
+          <a href="http://doyouwannagooutwithme.com/" target="_blank"
+            >doyouwannagooutwithme.com</a
+          >
+        </div>
+
+        <div class="small-project">
+          <h4>Romantic Coding Girl</h4>
+          <div class="small-project-images">
+            <img
+              src="pic/small_project2-1.png"
+              alt="Small Project 3"
+              class="small-project-image"
+            />
+            <img
+              src="pic/small_project2-2.png"
+              alt="Small Project 4"
+              class="small-project-image"
+            />
+          </div>
+          <p>
+            The truck that leaves a romantic letter to your lover. Built with
+            HTML, CSS.
+          </p>
+        </div>
+
+        <div class="small-project">
+          <h4>Will You Marry Me</h4>
+          <div class="small-project-images">
+            <img
+              src="pic/small_project3-1.png"
+              alt="Small Project 5"
+              class="small-project-image"
+            />
+            <img
+              src="pic/small_project3-2.png"
+              alt="Small Project 5"
+              class="small-project-image"
+            />
+          </div>
+          <p>
+            Marriage proposal to lover by plane. Built with HTML, CSS
+            Javascript.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openPage(page) {
+        window.location.href = page;
+      }
+
+      function openEmail() {
+        window.location.href = "mailto:elifgazioglu0@gmail.com";
+      }
+
+      function openGitHub() {
+        window.open("https://github.com/elifgazioglu", "_blank");
+      }
+
+      function updateTime() {
+        const now = new Date();
+        const options = { weekday: "long" };
+        const day = now.toLocaleDateString("en-US", options);
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+        document.getElementById(
+          "time"
+        ).innerText = `${day}, ${hours}:${minutes}`;
+      }
+
+      function openPopup() {
+        document.getElementById("popup").style.display = "block";
+      }
+
+      function openEducationPopup() {
+        document.getElementById("education-popup").style.display = "block";
+      }
+
+      function openExperiencePopup() {
+        document.getElementById("experience-popup").style.display = "block";
+      }
+
+      function openProjectsPopup() {
+        document.getElementById("projects-popup").style.display = "block";
+      }
+
+      document.getElementById("close").onclick = function () {
+        document.getElementById("popup").style.display = "none";
+      };
+
+      document.getElementById("close-education").onclick = function () {
+        document.getElementById("education-popup").style.display = "none";
+      };
+
+      document.getElementById("close-experience").onclick = function () {
+        document.getElementById("experience-popup").style.display = "none";
+      };
+
+      document.getElementById("close-projects").onclick = function () {
+        document.getElementById("projects-popup").style.display = "none";
+      };
+
+      document.getElementById("exitButton").onclick = function () {
+        window.location.href = "shutDown.html";
+      };
+
+      window.onclick = function (event) {
+        const popup = document.getElementById("popup");
+        const educationPopup = document.getElementById("education-popup");
+        const experiencePopup = document.getElementById("experience-popup");
+        const projectsPopup = document.getElementById("projects-popup");
+        if (event.target === popup) {
+          popup.style.display = "none";
+        }
+        if (event.target === educationPopup) {
+          educationPopup.style.display = "none";
+        }
+        if (event.target === experiencePopup) {
+          experiencePopup.style.display = "none";
+        }
+        if (event.target === projectsPopup) {
+          projectsPopup.style.display = "none";
+        }
+      };
+
+      setInterval(updateTime, 1000);
+      updateTime();
+    </script>
+  </body>
+</html>
